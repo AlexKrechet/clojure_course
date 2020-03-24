@@ -5,5 +5,5 @@
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.0"]]
   ;:main clojure-train.core
-  :repl-options {:init-ns clojure-train.protocols-tutorial}
+  :repl-options {:init-ns clojure-train.data-structures.practical-example}
   )
