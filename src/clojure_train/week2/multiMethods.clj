@@ -26,8 +26,8 @@
 (defmethod p2 :triangle [fig]
   (+ (:a fig) (:b fig) (:c fig)))
 
-;;default return for now implementation
-(defmethod p2 :default [fig] 0)
+;;default return for new implementation
+(defmethod p2 :default [fig] "No functions to calculate this")
 
 (map p2 figs)
 

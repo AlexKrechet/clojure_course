@@ -13,14 +13,16 @@
 ;;custom reduce-by function, receiving 4 args
 (defn reduce-by
   [key-fn f init coll]
-  (reduce (fn [summaries x]
-            (let [k (key-fn x)]
+  (reduce (fn [summaries x] (let [k (key-fn x)]
               (assoc summaries k (f (summaries k init) x))))
-          {} coll))
+          {} coll)
+  )
 
 ;;total price of orders for every customer
 (reduce-by :customer #(+ %1 (:total %2)) 0 orders)
 
 ;;list of customers for each product
 (reduce-by :product #(conj %1 (:customer %2)) #{} orders)
+
+(def numbers [1 2 3 4 5])
 
